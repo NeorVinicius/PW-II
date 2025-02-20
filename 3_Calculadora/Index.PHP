@@ -27,7 +27,7 @@
     </form>
 
     <?php
-
+    
     if (ISSET($_GET['Numero1'])) {
         if (empty($_GET['Numero1'])) {
             echo '<br> Valor obrigatorio';
