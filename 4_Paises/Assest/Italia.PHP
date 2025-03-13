@@ -1,3 +1,3 @@
-<?php include './header.php';?>
+<?php include './Header.PHP';?>
 <h1> Italia</h1>
-<?php include './footer.php';?>
+<?php include './Footer.PHP';?>

@@ -1,4 +1,4 @@
-<?php include './header.php';?>
+<?php include './Header.PHP';?>
 
 
 <div class="container-fluid bg-custom ">
@@ -15,4 +15,4 @@
 
 
 </div>
-<?php include './footer.php';?>
+<?php include './Footer.PHP';?>
