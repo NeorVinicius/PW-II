@@ -31,6 +31,6 @@
         echo "<br>Veiculo:" . $value["Nome"];
         echo "<br>Placa:" . $value["Placa"];
         echo "<br><img src=' " . $value["Foto"]."'>";
-        echo "<hr>"
+        echo "<hr>";
     };
 ?>
