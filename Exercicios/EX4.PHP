@@ -14,4 +14,5 @@ foreach ($numeros as $key => $numeros) {
 
 echo 'Existem '. $positivos . ' números maiores que 0 <br>';
 echo 'Existem '. $negativos . ' números menores que 0';
+
 ?>
