@@ -1,7 +1,6 @@
 <?php
     include '../../Config/Connection.PHP';
-
-    ?>
+?>
 
     <form action="Create.PHP" method="POST">
     <label for="username">Nome de Usuário</label>
@@ -18,4 +17,9 @@
     $password = isset($_POST['password']) ? $_POST['password'] : exit();
 
     $stmt = $pdo->prepare('INSERT INTO usuario(username, password) VALUES(:username, :password)' );
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':password', $password);
+    $stmt->execute();
+
+
 ?>
