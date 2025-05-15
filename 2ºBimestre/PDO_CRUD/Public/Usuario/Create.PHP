@@ -21,5 +21,5 @@
     $stmt->bindParam(':password', $password);
     $stmt->execute();
 
-
+    header("Location: Read.PHP");
 ?>
