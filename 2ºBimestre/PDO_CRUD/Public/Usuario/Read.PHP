@@ -1,4 +1,6 @@
 <?php
+    include '../../Includes/Header.PHP';
+    include '../../Includes/Menu.PHP';
     include '../../Config/Connection.PHP';
 ?>
 
@@ -16,3 +18,5 @@
 
     <hr>
 <?php } ?>
+
+<?php  include '../../Includes/Footer.PHP';?>
