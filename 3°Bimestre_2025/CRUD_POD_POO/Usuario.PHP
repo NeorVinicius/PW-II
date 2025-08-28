@@ -31,7 +31,13 @@
             $stmt->bindParam(':senha', $senha);
             $stmt->bindParam(':tipo', $tipo);
             $stmt->execute();
-            return "Cadastrado com sucesso!";
+            echo "Cadastrado com sucesso!" ;
+            echo'<br>';
+            echo '<a class="btn btn-primary" href="./Index.PHP" role="button">';
+                echo 'Prosseguir';
+            echo '</a>';
+
+            
         }
 
         public function buscar ($id) {

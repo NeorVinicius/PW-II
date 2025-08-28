@@ -6,7 +6,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-sm-12 col-md-8 col-xl-6 col-xxl-4">
 
-                <div class="card bg-light shadow my-5">
+                <div class="card bg-light shadow my-4">
                     <img src="https://t.ctcdn.com.br/DIEZqF3nbik0L6OFXKhoTDDj69Y=/27x180:5202x3095/640x360/smart/i334625.jpeg" class="card-img-top">
                     <div class="card-body">
                         <form action="./Cadastro_Usuario.PHP" method="post">
@@ -57,7 +57,13 @@
         }
         
         $usuario = new Usuario('', '', '', '');
-        echo $usuario->inserir($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['confirmar_senha'], 'Comum');
+        echo '<div class="row d-flex justify-content-center">';
+            echo '<div class="col-5">';
+                echo '<div class="alert alert-primary" style="text-align: center;">';
+                    echo $usuario->inserir($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['confirmar_senha'], 'Comum');
+                echo '</div>';
+            echo '</div>';
+        echo '</div>';
     ?>
 
 <?php include 'Footer.PHP' ?>
