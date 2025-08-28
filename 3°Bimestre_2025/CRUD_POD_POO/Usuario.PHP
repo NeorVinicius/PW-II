@@ -13,7 +13,17 @@
             $this->tipo = $tipo;
         } 
 
-        public function inserir ($nome, $email, $senha, $tipo) {
+        public function inserir ($nome, $email, $senha, $confirmar_senha, $tipo) {
+            global $pdo;
+
+            if (empty($nome) || empty($email) || empty($senha) || empty($confirmar_senha) || empty($tipo)) {
+                return "Favor preencher todos os campos!";
+            }
+
+            if ($senha != $confirmar_senha) {
+                return "Senha Incorreta";
+            }
+
             $tipo = 'admin';
             $stmt = $pdo->prepare("INSERT INTO usuario (nome, email, senha, tipo) VALUES (:nome, :email, :senha, :tipo)");
             $stmt->bindParam(':nome', $nome);
@@ -21,6 +31,7 @@
             $stmt->bindParam(':senha', $senha);
             $stmt->bindParam(':tipo', $tipo);
             $stmt->execute();
+            return "Cadastrado com sucesso!";
         }
 
         public function buscar ($id) {

@@ -1,4 +1,6 @@
 <?php include 'Header.PHP' ?>
+<?php include 'Usuario.PHP' ?>
+
 
     <div class="container-fluid">
         <div class="row d-flex justify-content-center">
@@ -7,7 +9,7 @@
                 <div class="card bg-light shadow my-5">
                     <img src="https://t.ctcdn.com.br/DIEZqF3nbik0L6OFXKhoTDDj69Y=/27x180:5202x3095/640x360/smart/i334625.jpeg" class="card-img-top">
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="./Cadastro_Usuario.PHP" method="post">
                             <div class="mb-3">
                                 <label for="nome" class="label-control">Nome Completo</label>
                                 <input type="text" name="nome" id="nome" class="form-control">
@@ -39,6 +41,24 @@
             </div>
         </div>
     </div>
+
+    <?php
+        if(!isset($_POST['nome'])) {
+        exit();
+        }
+        if(!isset($_POST['email'])) {
+        exit();
+        }
+        if(!isset($_POST['senha'])) {
+        exit();
+        }
+        if(!isset($_POST['confirmar_senha'])) {
+        exit();
+        }
+        
+        $usuario = new Usuario('', '', '', '');
+        echo $usuario->inserir($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['confirmar_senha'], 'Comum');
+    ?>
 
 <?php include 'Footer.PHP' ?>
 
